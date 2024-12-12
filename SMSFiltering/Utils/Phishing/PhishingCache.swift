@@ -41,8 +41,8 @@ final class PhishingCache: Codable {
 final class PhishingCacheFactory {
     
     private enum Constants {
-        static let suiteName = "group.com.simke.smsfiltering"
-        static let cacheKey = "pshishingCache"
+        static let suiteName = "group.com.simke.smsfiltering.shared"
+        static let cacheKey = "phishing.cache"
     }
     
     private enum PhishingCacheError: String, Error {
