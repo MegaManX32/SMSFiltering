@@ -11,17 +11,24 @@ class WelcomeViewModel: ObservableObject {
     
     @Published private(set) var phishingDomains: [PhishingDomain]
     @Published var newDomainName: String = ""
+    private let cache: PhishingCache
     
     init() {
-        phishingDomains = PhishingCacheFactory.shared.phishingCache().domainCache
+        cache = PhishingCacheFactory.shared.phishingCache()
+        phishingDomains = cache.domainCache
     }
     
     func addDomain() {
-        phishingDomains.append(PhishingDomain(name: newDomainName))
+        let domain = PhishingDomain(name: newDomainName)
+        cache.addDomain(domain)
+        PhishingCacheFactory.shared.saveCache(cache)
+        phishingDomains = cache.domainCache
         newDomainName = ""
     }
     
     func removeDomain(_ domain: PhishingDomain) {
-        phishingDomains = phishingDomains.filter { $0 != domain }
+        cache.removeDomain(domain)
+        PhishingCacheFactory.shared.saveCache(cache)
+        phishingDomains = cache.domainCache
     }
 }

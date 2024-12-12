@@ -20,6 +20,14 @@ final class PhishingCache: Codable {
         domainCache.append(PhishingDomain(name: "www.phishing.net"))
     }
     
+    func addDomain(_ domain: PhishingDomain) {
+        domainCache.append(domain)
+    }
+    
+    func removeDomain(_ domain: PhishingDomain) {
+        domainCache = domainCache.filter { $0 != domain }
+    }
+    
     func isPhishing(with body: String) -> Bool {
         for key in domainCache.map({ $0.name }) {
             if body.contains(key) {
@@ -62,12 +70,21 @@ final class PhishingCacheFactory {
             let data = try encoder.encode(cache)
             storeDataToSuite(data)
             Logger.shared.log(message: "Cache created")
-            
         } catch {
             Logger.shared.log(message: error.localizedDescription, level: .error)
         }
         
         return cache
+    }
+    
+    func saveCache(_ cache: PhishingCache) {
+        do {
+            let data = try encoder.encode(cache)
+            storeDataToSuite(data)
+            Logger.shared.log(message: "Cache saved")
+        } catch {
+            Logger.shared.log(message: error.localizedDescription, level: .error)
+        }
     }
     
     private func dataFromSuite() throws -> Data {
