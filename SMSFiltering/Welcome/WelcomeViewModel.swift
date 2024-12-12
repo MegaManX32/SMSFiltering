@@ -18,4 +18,8 @@ class WelcomeViewModel: ObservableObject {
     func addDomain(_ domain: String) {
         
     }
+    
+    func removeDomain(_ domain: PhishingDomain) {
+        phishingDomains = phishingDomains.filter { $0 != domain }
+    }
 }

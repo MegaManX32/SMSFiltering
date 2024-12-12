@@ -10,15 +10,8 @@ import os
 import SwiftUI
 
 class WelcomeViewController: UIHostingController<WelcomeView> {
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder, rootView: WelcomeView(viewModel: WelcomeViewModel()))
     }
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        let cache = PhishingCacheFactory.shared.phishingCache()
-//        Logger.shared.log(message: "SMSFilter installed with cache \(cache)")
-//    }
 }
 

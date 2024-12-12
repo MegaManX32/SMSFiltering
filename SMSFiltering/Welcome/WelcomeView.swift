@@ -18,8 +18,36 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             ForEach(viewModel.phishingDomains) { domain in
-                Text(domain.name)
+                WelcomeRow(text: domain.name) {
+                    viewModel.removeDomain(domain)
+                }
             }
+            Spacer()
+        }
+    }
+}
+
+struct WelcomeRow: View {
+    let text: String
+    let tapClosure: (() -> Void)?
+    
+    var body: some View {
+        HStack {
+            Text(text)
+                .multilineTextAlignment(.leading)
+                .font(.system(size: 18))
+                .padding([.leading, .trailing], 16)
+                .padding([.top, .bottom], 8)
+            
+            Spacer()
+            
+            Button(action: {
+                tapClosure?()
+            }) {
+                Label("", systemImage: "trash")
+                    .foregroundStyle(.red)
+            }
+            .padding(.trailing, 16)
         }
     }
 }

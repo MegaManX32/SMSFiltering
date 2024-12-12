@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PhishingDomain: Codable, Identifiable {
+struct PhishingDomain: Codable, Identifiable, Equatable {
     let name: String
     var id: String { name }
 }
