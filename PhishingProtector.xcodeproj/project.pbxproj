@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		159A5CF92D072F090056003D /* SMSFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 159A5CF22D072F090056003D /* SMSFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15A31F6E2D0C39E700FF911E /* PseudoBrowser.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15A31F652D0C39E700FF911E /* PseudoBrowser.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,6 +18,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 159A5CF12D072F090056003D;
 			remoteInfo = SMSFilterExtension;
+		};
+		15A31F6C2D0C39E700FF911E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 159A5CCE2D072ECA0056003D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A31F642D0C39E700FF911E;
+			remoteInfo = PseudoBrowser;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -28,6 +36,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				159A5CF92D072F090056003D /* SMSFilterExtension.appex in Embed Foundation Extensions */,
+				15A31F6E2D0C39E700FF911E /* PseudoBrowser.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,6 +46,7 @@
 /* Begin PBXFileReference section */
 		159A5CD62D072ECA0056003D /* PhishingProtector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhishingProtector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A5CF22D072F090056003D /* SMSFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A31F652D0C39E700FF911E /* PseudoBrowser.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PseudoBrowser.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -57,10 +67,31 @@
 		159A5D1B2D099E340056003D /* Exceptions for "PhishingProtector" folder in "SMSFilterExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Phishing/Data/ContentBlockerRule.swift,
+				Phishing/Data/PhishingCache.swift,
+				Phishing/Data/PhishingDomain.swift,
+				Phishing/PhishingFactory.swift,
 				Utils/Logger/Logger.swift,
-				Utils/Phishing/PhishingCache.swift,
 			);
 			target = 159A5CF12D072F090056003D /* SMSFilterExtension */;
+		};
+		15A31F722D0C39E700FF911E /* Exceptions for "PseudoBrowser" folder in "PseudoBrowser" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 15A31F642D0C39E700FF911E /* PseudoBrowser */;
+		};
+		15A31F7E2D0C454900FF911E /* Exceptions for "PhishingProtector" folder in "PseudoBrowser" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Phishing/Data/ContentBlockerRule.swift,
+				Phishing/Data/PhishingCache.swift,
+				Phishing/Data/PhishingDomain.swift,
+				Phishing/PhishingFactory.swift,
+				Utils/Logger/Logger.swift,
+			);
+			target = 15A31F642D0C39E700FF911E /* PseudoBrowser */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -70,6 +101,7 @@
 			exceptions = (
 				159A5CE82D072ECB0056003D /* Exceptions for "PhishingProtector" folder in "PhishingProtector" target */,
 				159A5D1B2D099E340056003D /* Exceptions for "PhishingProtector" folder in "SMSFilterExtension" target */,
+				15A31F7E2D0C454900FF911E /* Exceptions for "PhishingProtector" folder in "PseudoBrowser" target */,
 			);
 			path = PhishingProtector;
 			sourceTree = "<group>";
@@ -80,6 +112,14 @@
 				159A5CFD2D072F090056003D /* Exceptions for "SMSFilterExtension" folder in "SMSFilterExtension" target */,
 			);
 			path = SMSFilterExtension;
+			sourceTree = "<group>";
+		};
+		15A31F662D0C39E700FF911E /* PseudoBrowser */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				15A31F722D0C39E700FF911E /* Exceptions for "PseudoBrowser" folder in "PseudoBrowser" target */,
+			);
+			path = PseudoBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -99,6 +139,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15A31F622D0C39E700FF911E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +154,7 @@
 			children = (
 				159A5CD82D072ECA0056003D /* PhishingProtector */,
 				159A5CF32D072F090056003D /* SMSFilterExtension */,
+				15A31F662D0C39E700FF911E /* PseudoBrowser */,
 				159A5CD72D072ECA0056003D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +164,7 @@
 			children = (
 				159A5CD62D072ECA0056003D /* PhishingProtector.app */,
 				159A5CF22D072F090056003D /* SMSFilterExtension.appex */,
+				15A31F652D0C39E700FF911E /* PseudoBrowser.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +185,7 @@
 			);
 			dependencies = (
 				159A5CF82D072F090056003D /* PBXTargetDependency */,
+				15A31F6D2D0C39E700FF911E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				159A5CD82D072ECA0056003D /* PhishingProtector */,
@@ -169,6 +219,28 @@
 			productReference = 159A5CF22D072F090056003D /* SMSFilterExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		15A31F642D0C39E700FF911E /* PseudoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A31F712D0C39E700FF911E /* Build configuration list for PBXNativeTarget "PseudoBrowser" */;
+			buildPhases = (
+				15A31F612D0C39E700FF911E /* Sources */,
+				15A31F622D0C39E700FF911E /* Frameworks */,
+				15A31F632D0C39E700FF911E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				15A31F662D0C39E700FF911E /* PseudoBrowser */,
+			);
+			name = PseudoBrowser;
+			packageProductDependencies = (
+			);
+			productName = PseudoBrowser;
+			productReference = 15A31F652D0C39E700FF911E /* PseudoBrowser.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,6 +255,9 @@
 						CreatedOnToolsVersion = 16.1;
 					};
 					159A5CF12D072F090056003D = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					15A31F642D0C39E700FF911E = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -203,6 +278,7 @@
 			targets = (
 				159A5CD52D072ECA0056003D /* PhishingProtector */,
 				159A5CF12D072F090056003D /* SMSFilterExtension */,
+				15A31F642D0C39E700FF911E /* PseudoBrowser */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +292,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		159A5CF02D072F090056003D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A31F632D0C39E700FF911E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +322,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15A31F612D0C39E700FF911E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -246,6 +336,11 @@
 			isa = PBXTargetDependency;
 			target = 159A5CF12D072F090056003D /* SMSFilterExtension */;
 			targetProxy = 159A5CF72D072F090056003D /* PBXContainerItemProxy */;
+		};
+		15A31F6D2D0C39E700FF911E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A31F642D0C39E700FF911E /* PseudoBrowser */;
+			targetProxy = 15A31F6C2D0C39E700FF911E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -483,6 +578,60 @@
 			};
 			name = Release;
 		};
+		15A31F6F2D0C39E700FF911E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D25Z5VW5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PseudoBrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PseudoBrowser;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector.PseudoBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15A31F702D0C39E700FF911E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D25Z5VW5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PseudoBrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PseudoBrowser;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector.PseudoBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -509,6 +658,15 @@
 			buildConfigurations = (
 				159A5CFB2D072F090056003D /* Debug */,
 				159A5CFC2D072F090056003D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A31F712D0C39E700FF911E /* Build configuration list for PBXNativeTarget "PseudoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A31F6F2D0C39E700FF911E /* Debug */,
+				15A31F702D0C39E700FF911E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
