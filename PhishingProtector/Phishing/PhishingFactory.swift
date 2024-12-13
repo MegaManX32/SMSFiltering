@@ -11,7 +11,7 @@ import SafariServices
 final class PhishingCacheFactory {
     
     private enum Constants {
-        static let suiteName = "group.com.simke.smsfiltering.shared"
+        static let suiteName = "group.com.simke.phishingprotector.shared"
         static let cacheKey = "phishing.cache"
         static let contentBlockerPath = "blockerList.json"
         static let pseudoBrowserBundle = "com.simke.PhishingProtector.PseudoBrowser"
@@ -104,27 +104,3 @@ final class PhishingCacheFactory {
         }
     }
 }
-
-
-//// Path to the shared container
-//       let appGroupIdentifier = "group.com.yourcompany.phishingblocker"
-//       guard let sharedContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier) else {
-//           print("Shared container not found")
-//           context.completeRequest(withContentsOf: nil, error: nil)
-//           return
-//       }
-//       
-//       let blockerListPath = sharedContainer.appendingPathComponent("blockerList.json")
-//       
-//       if FileManager.default.fileExists(atPath: blockerListPath.path) {
-//           // Use the dynamically updated JSON
-//           context.completeRequest(withContentsOf: blockerListPath, error: nil)
-//       } else {
-//           // Fallback to the bundled JSON
-//           if let bundledPath = Bundle.main.url(forResource: "blockerList", withExtension: "json") {
-//               context.completeRequest(withContentsOf: bundledPath, error: nil)
-//           } else {
-//               print("No JSON file found")
-//               context.completeRequest(withContentsOf: nil, error: nil)
-//           }
-//       }

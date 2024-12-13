@@ -15,6 +15,7 @@ class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
             let attachment = NSItemProvider(contentsOf: url)!
             let item = NSExtensionItem()
             item.attachments = [attachment]
+            Logger.shared.log(message: "Loaded blocked list with attachment: \(attachment)")
             context.completeRequest(returningItems: [item], completionHandler: nil)
         } catch {
             Logger.shared.log(message: error.localizedDescription, level: .error)
