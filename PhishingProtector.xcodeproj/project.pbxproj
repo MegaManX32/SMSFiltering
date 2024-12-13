@@ -35,17 +35,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		159A5CD62D072ECA0056003D /* SMSFiltering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSFiltering.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		159A5CD62D072ECA0056003D /* PhishingProtector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhishingProtector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		159A5CF22D072F090056003D /* SMSFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		159A5CE82D072ECB0056003D /* Exceptions for "SMSFiltering" folder in "SMSFiltering" target */ = {
+		159A5CE82D072ECB0056003D /* Exceptions for "PhishingProtector" folder in "PhishingProtector" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 159A5CD52D072ECA0056003D /* SMSFiltering */;
+			target = 159A5CD52D072ECA0056003D /* PhishingProtector */;
 		};
 		159A5CFD2D072F090056003D /* Exceptions for "SMSFilterExtension" folder in "SMSFilterExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -54,7 +54,7 @@
 			);
 			target = 159A5CF12D072F090056003D /* SMSFilterExtension */;
 		};
-		159A5D1B2D099E340056003D /* Exceptions for "SMSFiltering" folder in "SMSFilterExtension" target */ = {
+		159A5D1B2D099E340056003D /* Exceptions for "PhishingProtector" folder in "SMSFilterExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Utils/Logger/Logger.swift,
@@ -65,13 +65,13 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		159A5CD82D072ECA0056003D /* SMSFiltering */ = {
+		159A5CD82D072ECA0056003D /* PhishingProtector */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				159A5CE82D072ECB0056003D /* Exceptions for "SMSFiltering" folder in "SMSFiltering" target */,
-				159A5D1B2D099E340056003D /* Exceptions for "SMSFiltering" folder in "SMSFilterExtension" target */,
+				159A5CE82D072ECB0056003D /* Exceptions for "PhishingProtector" folder in "PhishingProtector" target */,
+				159A5D1B2D099E340056003D /* Exceptions for "PhishingProtector" folder in "SMSFilterExtension" target */,
 			);
-			path = SMSFiltering;
+			path = PhishingProtector;
 			sourceTree = "<group>";
 		};
 		159A5CF32D072F090056003D /* SMSFilterExtension */ = {
@@ -105,7 +105,7 @@
 		159A5CCD2D072ECA0056003D = {
 			isa = PBXGroup;
 			children = (
-				159A5CD82D072ECA0056003D /* SMSFiltering */,
+				159A5CD82D072ECA0056003D /* PhishingProtector */,
 				159A5CF32D072F090056003D /* SMSFilterExtension */,
 				159A5CD72D072ECA0056003D /* Products */,
 			);
@@ -114,7 +114,7 @@
 		159A5CD72D072ECA0056003D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				159A5CD62D072ECA0056003D /* SMSFiltering.app */,
+				159A5CD62D072ECA0056003D /* PhishingProtector.app */,
 				159A5CF22D072F090056003D /* SMSFilterExtension.appex */,
 			);
 			name = Products;
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		159A5CD52D072ECA0056003D /* SMSFiltering */ = {
+		159A5CD52D072ECA0056003D /* PhishingProtector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 159A5CE92D072ECB0056003D /* Build configuration list for PBXNativeTarget "SMSFiltering" */;
+			buildConfigurationList = 159A5CE92D072ECB0056003D /* Build configuration list for PBXNativeTarget "PhishingProtector" */;
 			buildPhases = (
 				159A5CD22D072ECA0056003D /* Sources */,
 				159A5CD32D072ECA0056003D /* Frameworks */,
@@ -138,13 +138,13 @@
 				159A5CF82D072F090056003D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				159A5CD82D072ECA0056003D /* SMSFiltering */,
+				159A5CD82D072ECA0056003D /* PhishingProtector */,
 			);
-			name = SMSFiltering;
+			name = PhishingProtector;
 			packageProductDependencies = (
 			);
 			productName = SMSFiltering;
-			productReference = 159A5CD62D072ECA0056003D /* SMSFiltering.app */;
+			productReference = 159A5CD62D072ECA0056003D /* PhishingProtector.app */;
 			productType = "com.apple.product-type.application";
 		};
 		159A5CF12D072F090056003D /* SMSFilterExtension */ = {
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 159A5CD12D072ECA0056003D /* Build configuration list for PBXProject "SMSFiltering" */;
+			buildConfigurationList = 159A5CD12D072ECA0056003D /* Build configuration list for PBXProject "PhishingProtector" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -201,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				159A5CD52D072ECA0056003D /* SMSFiltering */,
+				159A5CD52D072ECA0056003D /* PhishingProtector */,
 				159A5CF12D072F090056003D /* SMSFilterExtension */,
 			);
 		};
@@ -255,13 +255,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SMSFiltering/SMSFiltering.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhishingProtector/PhishingProtector.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4D25Z5VW5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SMSFiltering/Info.plist;
+				INFOPLIST_FILE = PhishingProtector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -272,7 +272,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simke.SMSFiltering;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -286,13 +286,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SMSFiltering/SMSFiltering.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhishingProtector/PhishingProtector.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4D25Z5VW5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SMSFiltering/Info.plist;
+				INFOPLIST_FILE = PhishingProtector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -303,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simke.SMSFiltering;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -448,7 +448,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simke.SMSFiltering.SMSFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector.SMSFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -474,7 +474,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simke.SMSFiltering.SMSFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simke.PhishingProtector.SMSFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -486,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		159A5CD12D072ECA0056003D /* Build configuration list for PBXProject "SMSFiltering" */ = {
+		159A5CD12D072ECA0056003D /* Build configuration list for PBXProject "PhishingProtector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				159A5CEC2D072ECB0056003D /* Debug */,
@@ -495,7 +495,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		159A5CE92D072ECB0056003D /* Build configuration list for PBXNativeTarget "SMSFiltering" */ = {
+		159A5CE92D072ECB0056003D /* Build configuration list for PBXNativeTarget "PhishingProtector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				159A5CEA2D072ECB0056003D /* Debug */,
